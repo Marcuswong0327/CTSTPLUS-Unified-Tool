@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Talent Search Tool Plus 2.3",
+    "version": "2.3",
+    "description": "SEEK Auto-Messenger and Resume & Candidates' Info Extraction tools for candidate talent search",
+    "icons": {
+        "16": "images/CTSTPLUS_icon_16.png",
+        "48": "images/CTSTPLUS_icon_48.png",
+        "128": "images/CTSTPLUS_icon_128.png"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": [
+        "*://au.employer.seek.com/talentsearch/search/*",
+        "*://au.employer.seek.com/talentsearch/pooling/pool/*",
+        "https://azure-resume-extraction-ai.streamlit.app/*"
+    ],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "background": {
+        "service_worker": "backend/background.js",
+        "type": "module"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}
