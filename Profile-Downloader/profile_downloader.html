@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Downloader</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <!-- Profile Downloader Tool -->
+    <div id="profile-downloader" class="tool-section active">
+        <button class="back-button" data-action="back">← Back to Tools</button>
+        <h2>Profile Downloader</h2>
+
+        <div class="form-group">
+            <label for="user-email">Email Address:</label>
+            <input type="email" id="user-email" placeholder="Enter your email address for profile access">
+            <div style="font-size: 0.8em; color: #6c757d; margin-top: 5px;">
+                This email will be used to request access to candidate profiles
+            </div>
+        </div>
+
+        <div class="buttons-container">
+            <button id="profile-clear-button">Clear</button>
+            <button id="profile-download-button">Start Profile Access Process</button>
+        </div>
+
+        <div id="profile-status" class="status">Enter your email address to get started</div>
+        <progress id="profile-progress" value="0" max="100" style="width: 100%; margin: 10px 0;"></progress>
+
+        <div id="profile-results" style="display: none;">
+            <h3>Process Results</h3>
+            <div id="profile-summary"></div>
+        </div>
+    </div>
+
+    <script defer src="profile_downloader.js"></script>
+</body>
+
+</html>

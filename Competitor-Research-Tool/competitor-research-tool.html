@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Competitor Research Tool</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+
+<body>
+
+    <div id="competitor-research-tool" class="tool-section active">
+
+        <button class="back-button" data-action="back">← Back to Tools</button>
+
+        <h2>Competitor Research Tool</h2>
+
+
+
+        <p class="form-caption">Open a SEEK talent search with company filters applied, then save it here.</p>
+
+
+
+        <div class="crt-save-form form-group">
+
+            <label for="roleNameInput">Role name</label>
+
+            <input type="text" id="roleNameInput" placeholder="e.g. Estimator – Melbourne" maxlength="120">
+
+            <button type="button" id="addSearchButton">Add</button>
+
+        </div>
+
+
+
+        <div class="status" id="crtStatus"></div>
+
+
+
+        <div class="crt-saved-list" id="savedSearchList">
+
+            <p class="crt-empty-state" id="emptyState">No saved searches yet.</p>
+
+        </div>
+
+    </div>
+
+
+
+    <script defer src="competitor-research-tool.js"></script>
+
+</body>
+
+
+
+</html>
+

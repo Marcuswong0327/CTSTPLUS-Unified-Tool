@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>SEEK Auto-Messenger</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <!-- Auto-Messenger Tool -->
+    <div id="auto-messenger" class="tool-section active">
+        <button class="back-button" data-action="back">← Back to Tools</button>
+        <h2>SEEK Auto-Messenger</h2>
+
+        <div class="mode-selection">
+            <button class="mode-button" data-mode="search">Search</button>
+            <button class="mode-button active" data-mode="pool">Pool</button>
+        </div>
+
+        <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" placeholder="Job opportunity at [Your Company]">
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <p class="form-caption">Default Greetings</p>
+            <div class="message-composer">
+                <div class="message-prefix" id="message-prefix">Hi [candidate],</div>
+                <textarea id="message" placeholder="I came across your profile..."></textarea>
+            </div>
+            <p class="form-caption form-caption--above-actions">Default signature has been saved in Seek Talent</p>
+        </div>
+        <div class="buttons-container">
+            <button id="startButton">Start</button>
+            <button id="stopButton" class="stop" disabled>Stop</button>
+        </div>
+        <div class="progress-container">
+            <progress id="progressBar" value="0" max="100"></progress>
+        </div>
+        <div class="status" id="statusText">Idle</div>
+    </div>
+
+    <!-- Popup Modal for Completion/Error Messages -->
+    <div id="popup" class="custom-modal">
+        <div class="custom-modal-content">
+            <h3 id="popup-title">Process Update</h3>
+            <p id="popup-message">This is a sample message.</p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+
+    <script defer src="auto-messenger.js"></script>
+</body>
+
+</html>

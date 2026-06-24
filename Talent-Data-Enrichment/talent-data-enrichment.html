@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Talent Data Enrichment</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div id="talent-data-enrichment" class="tool-section active">
+        <button class="back-button" data-action="back">← Back to Tools</button>
+        <h2>Talent Data Enrichment</h2>
+
+        <div class="input-section">
+            <label for="linkedinUrls">LinkedIn URLs (one per line):</label>
+            <textarea id="linkedinUrls" rows="2" placeholder="https://www.linkedin.com/in/consultant"></textarea>
+        </div>
+
+        <div class="status-section">
+            <div id="enrichment-status" class = "status-message">Ready to enrich</div>
+            <progress id="enrichment-progress" value = "0" max="100"></progress>
+            <div id="enrichment-stats" class="progress-details"></div>
+
+        </div>
+
+        <div class="button-section">
+            <button type = "button" id = "enrichCopyPasteButton">Copy Paste URLs</button>
+            <button type = "button" id = "enrichBtn" class="extract-btn">Extract From URLs</button>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <!--Setting ContactOut, Apollo & Lusha API-->
+
+        <div class = "section-header">
+            <h3>Setting ONLY</h3>
+        </div>
+
+        <div class = "input-section">
+            <label for = "contactOutApiKey">ContactOut API Key:</label>
+            <input type = "password" id = "contactOutApiKey" placeholder="Enter your ContactOut API Key">
+        </div>
+
+        <div class = "input-section">
+            <label for = "apolloApiKey">Apollo API Key:</label>
+            <input type = "password" id = "apolloApiKey" placeholder="Enter your Apollo API Key">
+        </div>
+
+        <div class = "input-section">
+            <label for = "lushaApiKey">Lusha API Key:</label>
+            <input type = "password" id = "lushaApiKey" placeholder="Enter your Lusha API Key">
+        </div>
+    </div>
+
+    <script type="module" src="talent-data-enrichment.js"></script>
+</body>
+
+</html>
